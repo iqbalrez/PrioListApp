@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +16,7 @@ namespace PrioList
         public LoginForm()
         {
             InitializeComponent();
+            lblTempMessage.Text = "Gunakan user ID: irharsy dan password: iqbal\n(Akun sementara)";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
