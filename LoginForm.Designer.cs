@@ -36,6 +36,7 @@ namespace PrioList
             this.tbUserID = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
+            this.lblTempMessage = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -44,7 +45,7 @@ namespace PrioList
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 52);
+            this.label1.Location = new System.Drawing.Point(209, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 0;
@@ -106,6 +107,15 @@ namespace PrioList
             this.lblUserID.TabIndex = 0;
             this.lblUserID.Text = "User ID:";
             // 
+            // lblTempMessage
+            // 
+            this.lblTempMessage.AutoSize = true;
+            this.lblTempMessage.Location = new System.Drawing.Point(49, 68);
+            this.lblTempMessage.Name = "lblTempMessage";
+            this.lblTempMessage.Size = new System.Drawing.Size(69, 25);
+            this.lblTempMessage.TabIndex = 5;
+            this.lblTempMessage.Text = "PrioList";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.SpringGreen;
@@ -133,6 +143,7 @@ namespace PrioList
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 444);
+            this.Controls.Add(this.lblTempMessage);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox1);
@@ -158,6 +169,7 @@ namespace PrioList
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTempMessage;
     }
 }
 
