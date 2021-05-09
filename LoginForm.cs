@@ -12,23 +12,30 @@ namespace PrioList
 {
     public partial class LoginForm : Form
     {
-        User user1 = new User("irharsy", "iqbal");
+
         public LoginForm()
         {
             InitializeComponent();
-            lblTempMessage.Text = "Gunakan user ID: irharsy dan password: iqbal\n(Akun sementara)";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (user1.Verify(tbUserID.Text, tbPassword.Text))
+            bool Verify = false;
+            using (var db = new UserInfoModel())
             {
-                this.Hide();
-                MainForm mainForm = new MainForm(user1.UserID);
-                mainForm.Show();
+                var query = from UserInfo in db.UserInfoes where UserInfo.username == tbUserID.Text && UserInfo.password == tbPassword.Text select UserInfo;
+                foreach (var item in query)
+                {
+                    User user1 = new User(item.username, item.password);
+                    MainForm mainForm = new MainForm(tbUserID.Text);
+                    mainForm.Show();
+                    Verify = true;
+                }
             }
+            if (Verify)
+                MessageBox.Show("Login success");
             else
-                MessageBox.Show("User ID atau Password salah.");
+                MessageBox.Show("UserID and Password is not registered");
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

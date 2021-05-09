@@ -12,7 +12,7 @@ namespace PrioList
 {
     public partial class MainForm : Form
     {
-        BindingSource tasks = new BindingSource();
+        BindingSource TaskListBindingSource = new BindingSource();
         public MainForm(string userID)
         {
             InitializeComponent();
@@ -23,6 +23,11 @@ namespace PrioList
         {
             AddNewTaskForm addNewTask = new AddNewTaskForm(); 
             addNewTask.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
