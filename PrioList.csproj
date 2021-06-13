@@ -57,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -70,84 +71,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewTaskForm.cs">
+    <Compile Include="FormAddNewTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewTaskForm.Designer.cs">
-      <DependentUpon>AddNewTaskForm.cs</DependentUpon>
+    <Compile Include="FormAddNewTask.Designer.cs">
+      <DependentUpon>FormAddNewTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccountForm.cs">
+    <Compile Include="FormCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccountForm.Designer.cs">
-      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    <Compile Include="FormCreateAccount.Designer.cs">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBImportantTaskModel.cs" />
+    <Compile Include="DBNormalTaskModel.cs" />
+    <Compile Include="DBTaskModel.cs" />
+    <Compile Include="DBUserModel.cs" />
+    <Compile Include="FormHapusImportant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHapusImportant.Designer.cs">
+      <DependentUpon>FormHapusImportant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHapusNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHapusNormal.Designer.cs">
+      <DependentUpon>FormHapusNormal.cs</DependentUpon>
     </Compile>
     <Compile Include="ImportantTask.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="ImportantTaskDB.cs" />
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskListDataSet.Designer.cs">
+    <Compile Include="NormalTask.cs" />
+    <Compile Include="NormalTaskDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TaskListDataSet.xsd</DependentUpon>
+      <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="TaskListModel.cs" />
-    <Compile Include="TaskList.cs" />
-    <Compile Include="UserInfoModel.cs" />
-    <Compile Include="NormalTask.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="TaskDB.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserInfo.cs" />
-    <EmbeddedResource Include="CreateAccountForm.resx">
-      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    <Compile Include="UserDB.cs" />
+    <EmbeddedResource Include="FormAddNewTask.resx">
+      <DependentUpon>FormAddNewTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormCreateAccount.resx">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormHapusImportant.resx">
+      <DependentUpon>FormHapusImportant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="FormHapusNormal.resx">
+      <DependentUpon>FormHapusNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <None Include="TaskListDataSet.xsc">
-      <DependentUpon>TaskListDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TaskListDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TaskListDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TaskListDataSet.xss">
-      <DependentUpon>TaskListDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -165,20 +165,32 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TaskList.mdf">
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBPriolist.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TaskList_log.ldf">
+    <Content Include="DBPriolist_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>TaskList.mdf</DependentUpon>
+      <DependentUpon>DBPriolist.mdf</DependentUpon>
     </Content>
-    <Content Include="UserInfo.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UserInfo_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>UserInfo.mdf</DependentUpon>
-    </Content>
+    <None Include="Resources\btn close.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\Asset 15.png" />
+    <None Include="Resources\btnRemove.png" />
+    <None Include="Resources\btnEdit.png" />
+    <None Include="Resources\Asset 12.png" />
+    <None Include="Resources\btnadd.png" />
+    <None Include="Resources\tbcreate.png" />
+    <None Include="Resources\tblogin.png" />
+    <None Include="Resources\pb1_2.png" />
+    <None Include="Resources\pb2_1.png" />
+    <None Include="Resources\pb1_1.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

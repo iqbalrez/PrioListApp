@@ -22,7 +22,5 @@ namespace PrioList
             this.PriorityLevel = priorityLevel;
             this.PrioLev = prioLev;
         }
-
-
     }
 }
